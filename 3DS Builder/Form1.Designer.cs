@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.PB_Show = new System.Windows.Forms.ProgressBar();
             this.TB_Romfs = new System.Windows.Forms.TextBox();
             this.B_Go = new System.Windows.Forms.Button();
@@ -46,6 +47,7 @@
             this.CHK_PrebuiltRomfs = new System.Windows.Forms.CheckBox();
             this.CHK_PrebuiltExefs = new System.Windows.Forms.CheckBox();
             this.RTB_Progress = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // PB_Show
@@ -218,11 +220,21 @@
             this.RTB_Progress.TabIndex = 25;
             this.RTB_Progress.Text = "";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(322, 261);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(106, 39);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "v1.1.1: \r\nNo more Nintendo\r\noriented Serial format";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(444, 361);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.RTB_Progress);
             this.Controls.Add(this.CHK_PrebuiltExefs);
             this.Controls.Add(this.CHK_PrebuiltRomfs);
@@ -241,6 +253,7 @@
             this.Controls.Add(this.TB_Romfs);
             this.Controls.Add(this.B_Go);
             this.Controls.Add(this.B_Romfs);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(460, 400);
             this.MinimumSize = new System.Drawing.Size(460, 400);
             this.Name = "Form1";
@@ -270,6 +283,7 @@
         private System.Windows.Forms.CheckBox CHK_PrebuiltRomfs;
         private System.Windows.Forms.CheckBox CHK_PrebuiltExefs;
         private System.Windows.Forms.RichTextBox RTB_Progress;
+        private System.Windows.Forms.Label label3;
     }
 }
 
