@@ -230,7 +230,7 @@ namespace _3DS_Builder
         }
         private void TB_Serial_TextChanged(object sender, EventArgs e)
         {
-            TB_Serial.Text = TB_Serial.Text.ToUpper();
+            TB_Serial.Text = TB_Serial.Text;
             Validate_Go();
         }
         private void CHK_PrebuiltRomfs_CheckedChanged(object sender, EventArgs e)

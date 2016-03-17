@@ -279,25 +279,10 @@ namespace CTR
         internal static bool isValid(string exeFS, string romFS, string exeheader, string path, string serial, bool Card2)
         {
             bool isSerialValid = true;
-            if (serial.Length == 10)
+            if (serial.Length <= 10 && serial.Length >= 3)
             {
-                string[] subs = serial.Split('-');
-                if (subs.Length != 3)
+                foreach (char c in serial.Where(c => !Char.IsLetterOrDigit(c) && c != '-'))
                     isSerialValid = false;
-                else
-                {
-                    if (subs[0].Length != 3 || subs[1].Length != 1 || subs[2].Length != 4)
-                        isSerialValid = false;
-                    else if (subs[0] != "CTR" && subs[0] != "KTR")
-                        isSerialValid = false;
-                    else if (subs[1] != "P" && subs[1] != "N" && subs[2] != "U")
-                        isSerialValid = false;
-                    else
-                    {
-                        foreach (char c in subs[2].Where(c => !Char.IsLetterOrDigit(c)))
-                            isSerialValid = false;
-                    }
-                }
             }
             else
             {
